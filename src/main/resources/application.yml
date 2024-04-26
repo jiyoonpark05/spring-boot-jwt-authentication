@@ -26,3 +26,7 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
         format_sql: true      # 쿼리 로그 포맷 (정렬)
         show_sql: true        # 쿼리 로그 출력
+jwt:
+  header: Authorization
+  secret: d2cf4c445a7aa9124bdcab90e854b9f1caddaf1ae4d2785817678fefaf0f3fae
+  token-validity-in-seconds: 86400

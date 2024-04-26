@@ -4,7 +4,7 @@ This project is JWT (JSON Web Token) Authentication example. You can test with e
 ### JWT (JSON Web Token)
 ![jwt_image](/src/main/resources/image/jwt_image.png)
 ### Basic vs Bearer authentication
-- <b>Basic authentication</b>: 
+- <b>Basic authentication</b>: <br>
   Basic authentication is a simple and widely supported authentication method that uses the HTTP header to send the username and password of the client.
 
   ```http
@@ -18,8 +18,9 @@ This project is JWT (JSON Web Token) Authentication example. You can test with e
 3. The client has to store the credentials securely and send them repeatedly, which can affect the performance and security of the API
 <br><br>
 
-- <b>Bearer authentication</b>:
+- <b>Bearer authentication</b>: <br>
   Bearer authentication is a more advanced and secure authentication method that uses tokens instead of credentials.
+  
    ```http
   Authorization: Bearer <token>
   ```

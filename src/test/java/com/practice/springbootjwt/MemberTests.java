@@ -19,12 +19,12 @@ class MemberTests {
     // create user
     @Test
     void saveMember() {
-//        Member params = Member.builder()
-//                .loginId("jiyoonius")
-//                .password("1234")
-//                .name("Jiyoon")
-//                .build();
-//        memberRepository.save(params);
+        Member params = Member.builder()
+                .loginId("jiyoonius")
+                .password("1234")
+                .name("Jiyoon")
+                .build();
+        memberRepository.save(params);
     }
 
     @Test
