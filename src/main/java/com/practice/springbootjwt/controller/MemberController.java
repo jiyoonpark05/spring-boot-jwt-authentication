@@ -20,7 +20,9 @@ public class MemberController {
     @PostMapping("/sign-in")
     public JwtToken signIn(@RequestBody SignInDto signInDto) {
         String loginId = signInDto.getLoginId();
+        String username = signInDto.getUsername();
         String password = signInDto.getPassword();
+
 
         JwtToken jwtToken = memberService.signIn(loginId,password);
         log.info("request login = {}, password={}" , loginId, password);
