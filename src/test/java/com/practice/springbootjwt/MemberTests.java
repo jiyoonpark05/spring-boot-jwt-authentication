@@ -22,7 +22,7 @@ class MemberTests {
         Member params = Member.builder()
                 .loginId("jiyoonius")
                 .password("1234")
-                .name("Jiyoon")
+                .username("Jiyoon")
                 .build();
         memberRepository.save(params);
     }

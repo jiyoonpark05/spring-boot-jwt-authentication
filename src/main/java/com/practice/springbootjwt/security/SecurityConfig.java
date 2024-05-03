@@ -22,7 +22,8 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         return http.csrf(csrf -> csrf.disable())  // doesn't use csrf, basic auth becasue it's RESREST API
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))       // doesn't use Session becasue it will use JWT
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/member/sign-in").permitAll()      // allow access from those API
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/member/sign-up").permitAll()
+                                                    .requestMatchers("/member/sign-in").permitAll()      // allow access from those API
 //                                                    .requestMatchers("/member/info").hasRole("USER")    // allow access for USER role
                                                     .anyRequest().authenticated())                                 // besides thoes exceptions all the requests need authentication
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class).build();
@@ -32,4 +33,5 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
+
 }
